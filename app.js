@@ -141,11 +141,11 @@ function findSongByTitle(documentContent, songTitle) {
         }
 
         // Ako smo završili sve elemente i pronašli pesmu na poslednjoj stranici
-        //if (songFound) {
-            //contentElement.innerHTML = `Song found on page ${pageCount}:\n\n${currentPageContent}`;
-            //console.log("----- Document Content End -----");
-           // return;
-        //}
+        if (songFound) {
+            contentElement.innerHTML = `Song found on page ${pageCount}:\n\n${currentPageContent}`;
+            console.log("----- Document Content End -----");
+            return;
+        }
 
         console.log("----- Document Content End -----");
     }
