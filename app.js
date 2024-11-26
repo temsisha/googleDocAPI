@@ -88,7 +88,7 @@ function getDocumentContent(documentId, accessToken) {
 
 // Search for a song by title and return the page content containing it
 function findSongByTitle(documentContent, songTitle) {
-    let currentPageContent = '';
+    //let currentPageContent = '';
     let pageCount = 1;
     let songFound = false;
 
@@ -117,7 +117,7 @@ function findSongByTitle(documentContent, songTitle) {
                 const cleanSongTitle = cleanText(songTitle);
 
                 // Dodajemo paragrafni sadržaj u trenutnu stranicu
-                currentPageContent += paragraphContent + '\n';
+                //currentPageContent += paragraphContent + '\n';
 
                 // Ako pronađemo naziv pesme, postavljamo oznaku da je pronađena
                 if (cleanParagraphContent.includes(cleanSongTitle)) {
@@ -129,10 +129,10 @@ function findSongByTitle(documentContent, songTitle) {
             if (element.sectionBreak || (element.paragraph && element.paragraph.elements.some(e => e.pageBreak))) {
                 if (songFound) {
                     // Prikazujemo sadržaj cele stranice kada pronađemo pesmu
-                    contentElement.innerHTML = `Song found on page ${pageCount}:\n\n${currentPageContent}`;
-                    console.log("----- Document Content End -----");
-                    return;
-                }
+                   //contentElement.innerHTML = `Song found on page ${pageCount}:\n\n${currentPageContent}`;
+                   //console.log("----- Document Content End -----");
+                   return;
+               }
                 // Resetujemo trenutni sadržaj i prelazimo na novu stranicu
                 currentPageContent = '';
                 pageCount++;
