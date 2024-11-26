@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Docs Lyrics Search</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <h1>Search Song Lyrics in Google Doc</h1>
+    <button id="authorize_button">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+    <div>
+        <input type="text" id="song_title" placeholder="Enter song title">
+        <button id="search_button">Search</button>
+    </div>
+    <pre id="content"></pre>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
