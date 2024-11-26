@@ -142,7 +142,7 @@ function findSongByTitle(documentContent, songTitle) {
 
         // Ako smo završili sve elemente i pronašli pesmu na poslednjoj stranici
         if (songFound) {
-            contentElement.innerHTML = `Song found on page ${pageCount}:\n\n${currentPageContent}`;
+            contentElement.innerHTML = `Song found\n\n${currentPageContent}`;
             console.log("----- Document Content End -----");
             return;
         }
