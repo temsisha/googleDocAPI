@@ -128,10 +128,9 @@ function findSongByTitle(documentContent, songTitle) {
             // Ako naiđemo na sectionBreak ili pageBreak, prelazimo na novu stranicu
             if (element.sectionBreak || (element.paragraph && element.paragraph.elements.some(e => e.pageBreak))) {
                 if (songFound) {
-                    // Prikazujemo sadržaj cele stranice kada pronađemo pesmu
-                   //contentElement.innerHTML = `Song found on page ${pageCount}:\n\n${currentPageContent}`;
-                    ${currentPageContent}
-                   //console.log("----- Document Content End -----");
+                    //Prikazujemo sadržaj cele stranice kada pronađemo pesmu
+                   contentElement.innerHTML = ${currentPageContent};
+                   console.log("----- Document Content End -----");
                    return;
                }
                 // Resetujemo trenutni sadržaj i prelazimo na novu stranicu
