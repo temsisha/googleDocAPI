@@ -88,7 +88,7 @@ function getDocumentContent(documentId, accessToken) {
 
 // Search for a song by title and return the page content containing it
 function findSongByTitle(documentContent, songTitle) {
-    //let currentPageContent = '';
+    let currentPageContent = '';
     let pageCount = 1;
     let songFound = false;
 
